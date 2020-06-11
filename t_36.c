@@ -24,10 +24,11 @@ int main() {
 }
 
 int checkTheNum(int num) {
-	int input, numLen = 0;
+	int input, numLen;
 	char str_input[5];
 	char yesNo;
 	while (1) {
+		numLen = 0;
 		scanf("%s", &str_input);
 		for (int i = 0; i < 4; ++i) {
 			if (isdigit(str_input[i])) {
