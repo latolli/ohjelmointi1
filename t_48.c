@@ -46,7 +46,12 @@ int main() {
 			}
 			for (int i = 1; i < 7; ++i) {
 				flag = 0;
-				scanf("%d", &randomNum);
+				scanf("%s", &strRow);
+				if (sscanf(strRow, "%d", &randomNum) != 1) {
+					printf("Not a number, try again.\n");
+					--i;
+					continue;
+				}
 				if (randomNum < 1 || randomNum > 40) {
 					printf("That is not in range 1-40, try again.\n");
 					--i;
